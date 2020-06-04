@@ -1,0 +1,78 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Step 77";
+}
+<head>
+    <script type = "text/javascript">
+        function myMove() {
+            var elem = document.getElementById("animate");
+            var pos = 0;
+            var id = setInterval(frame, 5);
+            function frame() {
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.top = pos + "px";
+                    elem.style.left = pos + "px";
+                }
+            }
+        }
+    </script>
+</head>
+<style>
+    body {
+        font-size: 16px;
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #81d8d0;
+    }
+    .box {
+        width: 100%;
+        height: 600px;
+        text-align: center;
+    }
+    h3 {
+        line-height: 30px;
+        padding-bottom: 20px;
+    }
+    .text-center {
+        text-align: center;
+    }
+    #container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: #406c68;
+    }
+    #animate {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: #0c1514;
+    }
+</style>
+<body>
+
+    <div class="text-center">
+        <h3>VISUAL STUDIO COURSE Step 77 Assignment</h3>
+        <p>This is a basic website created in Visual Studio. Following this example of animation is a music video.</p>
+    </div>
+    <div>
+        <p><button onclick="myMove()">Click Me</button></p>
+        <div id="container">
+            <div id="animate"></div>
+        </div><br /><br /><br /><br />
+    </div>
+    <div class="text-center">
+        <div class="box">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ktvTqknDobU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>
+                <i>Radioactive</i> video courtesy of: <a href="https://youtu.be/ktvTqknDobU" target="_blank">Imagine Dragons</a><br>
+            </p>
+        </div>
+    </div>
+</body>
